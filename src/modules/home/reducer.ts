@@ -1,10 +1,4 @@
-import { HomeActionTypes, dataType, HomeActions } from './actions'
-
-export interface HomeState {
-  data: dataType | null;
-  loading: boolean;
-  error: boolean;
-}
+import { HomeActionTypes, HomeActions, HomeState } from './types'
 
 const defaultState: HomeState = {
   data: null,
@@ -12,27 +6,27 @@ const defaultState: HomeState = {
   error: false,
 };
 
-export const homeReducer = (state = defaultState, action: HomeActions): HomeState => {
+export const homeReducer = (state = defaultState, action: HomeActionTypes): HomeState => {
   switch (action.type) {
-    case HomeActionTypes.HOME_PENDING:
+    case HomeActions.HOME_PENDING:
       return {
         ...state,
         loading: true,
       };
-    case HomeActionTypes.HOME_SUCCEEDED:
+    case HomeActions.HOME_SUCCEEDED:
       return {
         ...state,
         data: action.payload,
         loading: false,
         error: false
       };
-    case HomeActionTypes.HOME_CLEAR:
+    case HomeActions.HOME_CLEAR:
       return {
         ...state,
         loading: false,
         error: false
       };
-    case HomeActionTypes.HOME_FAILURE:
+    case HomeActions.HOME_FAILURE:
       return {
         ...state,
         loading: false,
