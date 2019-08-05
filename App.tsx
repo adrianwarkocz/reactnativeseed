@@ -1,12 +1,15 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import { store } from './src/store';
+import configureStore from './src/store';
 import { TitleText, PalevioletredText, BlueText } from './src/components/Texts'
 import { CentredSafeAreaView } from './src/components/Containers'
 
+const rootStore = configureStore();
+
+
 const App = () => {
   return (
-    <Provider store={store}>
+    <Provider store={rootStore}>
       <CentredSafeAreaView>
         <TitleText>Stack:</TitleText>
         <PalevioletredText>

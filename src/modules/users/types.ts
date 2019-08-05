@@ -9,6 +9,12 @@ export enum UsersActions {
   USERS_ADD_FAILURE = 'USERS_ADD_FAILURE',
 }
 
+export interface UsersState {
+  data: Array<dataType> | null;
+  loading: boolean;
+  error: boolean;
+}
+
 export interface dataType { name: string, age: number }
 
 interface usersGetPendingAction {

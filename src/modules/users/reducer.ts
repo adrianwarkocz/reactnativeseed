@@ -1,10 +1,4 @@
-import { UsersActionsTypes, dataType, UsersActions } from './types'
-
-export interface UsersState {
-  data: Array<dataType> | null;
-  loading: boolean;
-  error: boolean;
-}
+import { UsersActionsTypes, UsersState, UsersActions } from './types'
 
 const defaultState: UsersState = {
   data: null,
