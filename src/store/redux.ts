@@ -1,11 +1,12 @@
 import { combineReducers, Reducer, applyMiddleware, createStore } from 'redux';
 import createSagaMiddleware from 'redux-saga';
-import { homeReducer } from '../modules/home/reducer'
-import { usersReducer } from '../modules/users/reducer'
-import { HomeState } from '../modules/home/types';
-import { UsersState } from '../modules/users/types';
+import rootSaga from './saga'
+import { homeReducer } from '../modules/Home/reducer'
+import { usersReducer } from '../modules/Users/reducer'
+import { HomeState } from '../modules/Home/types';
+import { UsersState } from '../modules/Users/types';
 
-interface ApplicationState {
+export interface ApplicationState {
   homeReducer: HomeState;
   usersReducer: UsersState;
 }

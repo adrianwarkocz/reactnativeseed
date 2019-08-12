@@ -31,7 +31,8 @@ interface usersGetFailureAction {
 }
 
 interface usersAddPendingAction {
-  type: typeof UsersActions.USERS_ADD_PENDING
+  type: typeof UsersActions.USERS_ADD_PENDING,
+  name: string
 }
 
 interface usersAddSucceededAction {

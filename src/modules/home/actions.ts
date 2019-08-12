@@ -1,6 +1,6 @@
 import { HomeActionTypes, HomeActions, dataType } from './types'
 
-export const homePending = (): HomeActionTypes => {
+export const getHomeData = (): HomeActionTypes => {
   return {
     type: HomeActions.HOME_PENDING,
   }

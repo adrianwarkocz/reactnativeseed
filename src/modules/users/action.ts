@@ -19,9 +19,10 @@ export const userGetFailure = (): UsersActionsTypes => {
   }
 }
 
-export const usersAddPending = (): UsersActionsTypes => {
+export const usersAddPending = (name: string): UsersActionsTypes => {
   return {
     type: UsersActions.USERS_ADD_PENDING,
+    name
   }
 }
 
