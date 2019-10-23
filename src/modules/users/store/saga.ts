@@ -1,24 +1,19 @@
 import { all, takeLatest, call, put } from 'redux-saga/effects';
-import { HomeActions } from '../types'
-import { homeFailure, homeSucceeded, homeClear } from './actions'
+import { UsersActions } from '../types'
+import { userGetFailure, usersGetSucceeded } from './actions'
 import { getHomeData } from '../../../services/homeService'
 
-function* executeGetHomeData() {
+function* executeGetUsersData() {
   try {
     const data = yield call(getHomeData);
-    yield put(homeSucceeded(data));
+    yield put(usersGetSucceeded(data));
   } catch (error) {
-    yield put(homeFailure());
+    yield put(userGetFailure());
   }
 }
 
-function* executeClearHomeData() {
-  yield put(homeClear())
-}
-
-export default function* homeSaga() {
+export default function* usersSaga() {
   yield all([
-    takeLatest(HomeActions.HOME_PENDING, executeGetHomeData),
-    takeLatest(HomeActions.HOME_CLEAR, executeClearHomeData)
+    takeLatest(UsersActions.USERS_GET_PENDING, executeGetUsersData),
   ]);
 }

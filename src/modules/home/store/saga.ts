@@ -1,6 +1,6 @@
 import { all, takeLatest, call, put } from 'redux-saga/effects';
 import { HomeActions } from '../types'
-import { homeFailure, homeSucceeded, homeClear } from './actions'
+import { homeFailure, homeSucceeded } from './actions'
 import { getHomeData } from '../../../services/homeService'
 
 function* executeGetHomeData() {
@@ -12,13 +12,8 @@ function* executeGetHomeData() {
   }
 }
 
-function* executeClearHomeData() {
-  yield put(homeClear())
-}
-
 export default function* homeSaga() {
   yield all([
     takeLatest(HomeActions.HOME_PENDING, executeGetHomeData),
-    takeLatest(HomeActions.HOME_CLEAR, executeClearHomeData)
   ]);
 }
