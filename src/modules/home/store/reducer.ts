@@ -1,4 +1,4 @@
-import { HomeActionTypes, HomeActions, HomeState } from './types'
+import { HomeActionTypes, HomeActions, HomeState } from '../types'
 
 const defaultState: HomeState = {
   data: null,

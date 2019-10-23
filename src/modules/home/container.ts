@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import HomeComponent from './component';
-import { homeClear, getHomeData } from './actions';
+import { homeClear, getHomeData } from './store/actions';
 
 interface HomePropsActions {
   homeClear: typeof homeClear,

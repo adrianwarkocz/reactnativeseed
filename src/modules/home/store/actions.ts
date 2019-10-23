@@ -1,4 +1,4 @@
-import { HomeActionTypes, HomeActions, dataType } from './types'
+import { HomeActionTypes, HomeActions, dataType } from '../types'
 
 export const getHomeData = (): HomeActionTypes => {
   return {

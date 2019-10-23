@@ -1,7 +1,7 @@
 import { all, takeLatest, call, put } from 'redux-saga/effects';
-import { HomeActions } from './types'
+import { HomeActions } from '../types'
 import { homeFailure, homeSucceeded, homeClear } from './actions'
-import { getHomeData } from '../../services/homeService'
+import { getHomeData } from '../../../services/homeService'
 
 function* executeGetHomeData() {
   try {

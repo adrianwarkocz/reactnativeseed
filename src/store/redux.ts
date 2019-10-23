@@ -1,8 +1,8 @@
 import { combineReducers, Reducer, applyMiddleware, createStore } from 'redux';
 import createSagaMiddleware from 'redux-saga';
 import rootSaga from './saga'
-import { homeReducer } from '../modules/Home/reducer'
-import { usersReducer } from '../modules/Users/reducer'
+import { homeReducer } from '../modules/Home/store/reducer'
+import { usersReducer } from '../modules/Users/store/reducer'
 import { HomeState } from '../modules/Home/types';
 import { UsersState } from '../modules/Users/types';
 

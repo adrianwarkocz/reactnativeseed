@@ -1,4 +1,4 @@
-import { UsersActionsTypes, UsersState, UsersActions } from './types'
+import { UsersActionsTypes, UsersState, UsersActions } from '../types'
 
 const defaultState: UsersState = {
   data: null,

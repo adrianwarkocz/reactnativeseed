@@ -1,4 +1,4 @@
-import { UsersActionsTypes, UsersActions, dataType } from './types'
+import { UsersActionsTypes, UsersActions, dataType } from '../types'
 
 export const usersGetPending = (): UsersActionsTypes => {
   return {
